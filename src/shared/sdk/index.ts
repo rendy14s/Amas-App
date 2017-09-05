@@ -48,6 +48,8 @@ import { SocketBrowser } from './sockets/socket.browser';
 import { SocketDriver } from './sockets/socket.driver';
 import { SocketConnection } from './sockets/socket.connections';
 import { RealTime } from './services/core/real.time';
+import { AmasmasterlicenceApi } from './services/custom/Amasmasterlicence';
+import { AmasusercredentialApi } from './services/custom/Amasusercredential';
 /**
 * @module SDKBrowserModule
 * @description
@@ -79,6 +81,8 @@ export class SDKBrowserModule {
         JSONSearchParams,
         SDKModels,
         RealTime,
+        AmasmasterlicenceApi,
+        AmasusercredentialApi,
         internalStorageProvider,
         { provide: SDKStorage, useClass: StorageBrowser },
         { provide: SocketDriver, useClass: SocketBrowser }
