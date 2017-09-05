@@ -1,0 +1,109 @@
+<!--
+  Generated template for the SignUpPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <div id="cloud-layer">
+    <ion-navbar style="height: 7em !important;" color="primary">
+      <ion-row class="title-chat">
+        <ion-col width-100>
+          <div class="profile-div" [ngStyle]="{'background-image': 'url(assets/images/logo_amas.png)'}">
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-navbar>
+  </div>
+</ion-header>
+
+<ion-content padding class="bg-main" id="cloud-layer">
+  <form (ngSubmit)="signup()" #registerForm="ngForm">
+
+    <ion-item>
+      <ion-label floating>Full Name</ion-label>
+      <ion-input type="text" name="full" [(ngModel)]="fullName" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Birthday</ion-label>
+      <ion-input type="date" name="birth" [(ngModel)]="birthDate" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Provinsi</ion-label>
+      <ion-select name="provinsi" [(ngModel)]="province" required>
+        <ion-option value="Nanggroe Aceh Darussalam">Nanggroe Aceh Darussalam</ion-option>
+        <ion-option value="Bali">Bali</ion-option>
+        <ion-option value="Kepulauan Bangka-Belitung">Kepulauan Bangka-Belitung</ion-option>
+        <ion-option value="Banten">Banten</ion-option>
+        <ion-option value="Bengkulu">Bengkulu</ion-option>
+        <ion-option value="Gorontalo">Gorontalo</ion-option>
+        <ion-option value="Jawa Barat">Jawa Barat</ion-option>
+        <ion-option value="DKI Jakarta">DKI Jakarta</ion-option>
+        <ion-option value="Jambi">Jambi</ion-option>
+        <ion-option value="Jawa Tengah">Jawa Tengah</ion-option>
+        <ion-option value="Jawa Timur">Jawa Timur</ion-option>
+        <ion-option value="Kalimantan Barat">Kalimantan Barat</ion-option>
+        <ion-option value="Kalimantan Selatan">Kalimantan Selatan</ion-option>
+        <ion-option value="Kalimantan Tengah">Kalimantan Tengah</ion-option>
+        <ion-option value="Kalimantan Timur">Kalimantan Timur</ion-option>
+        <ion-option value="Kalimantan Utara">Kalimantan Utara</ion-option>
+        <ion-option value="Kepulauan Riau">Kepulauan Riau</ion-option>
+        <ion-option value="Lampung">Lampung</ion-option>
+        <ion-option value="Maluku">Maluku</ion-option>
+        <ion-option value="Maluku Utara">Maluku Utara</ion-option>
+        <ion-option value="Nusa Tenggara Barat">Nusa Tenggara Barat</ion-option>
+        <ion-option value="Nusa Tenggara Timur">Nusa Tenggara Timur</ion-option>
+        <ion-option value="Papua Barat">Papua Barat</ion-option>
+        <ion-option value="Papua">Papua</ion-option>
+        <ion-option value="Sulawesi Barat">Sulawesi Barat</ion-option>
+        <ion-option value="Sulawesi Selatan">Sulawesi Selatan</ion-option>
+        <ion-option value="Sulawesi Tengah">Sulawesi Tengah</ion-option>
+        <ion-option value="Sulawesi Tenggara">Sulawesi Tenggara</ion-option>
+        <ion-option value="Sulawesi Utara">Sulawesi Utara</ion-option>
+        <ion-option value="Sumatera Barat">Sumatera Barat</ion-option>
+        <ion-option value="Sumatera Selatan">Sumatera Selatan</ion-option>
+        <ion-option value="Sumatera Utara">Sumatera Utara</ion-option>
+        <ion-option value="Daerah Istimewa Yogyakarta">Daerah Istimewa Yogyakarta</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Gender</ion-label>
+      <ion-select name="gender" [(ngModel)]="gender" required>
+        <ion-option value="Male">Male</ion-option>
+        <ion-option value="Female">Female</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Licence Code</ion-label>
+      <ion-input type="password" name="licence" [(ngModel)]="licence" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text" name="username" [(ngModel)]="username" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" name="password" [(ngModel)]="password" required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col class="signup-col">
+          <button ion-button color="danger" full [disabled]="!registerForm.form.valid" round>REGISTER</button>
+      </ion-col>
+    </ion-row>
+
+  </form>
+
+    <ion-row>
+      <ion-col class="signup-col">
+          <button ion-button color="danger" full (click)="cancel()" round>Cancel</button>
+      </ion-col>
+    </ion-row>
+</ion-content>
