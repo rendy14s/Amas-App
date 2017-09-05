@@ -1,3 +1,4 @@
+import { Storage } from '@ionic/storage';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -8,9 +9,27 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
+  public rootPage: any;
 
+  constructor(
+    public platform: Platform,
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen,
+    private storage: Storage
+  ) {
 
+    this.storage.ready().then(() => {
 
+      this.storage.get('amasAuth').then((amasAuth) => {
+        if (amasAuth == null || amasAuth == undefined) {
+          this.rootPage = 'LoginPage';
+        } else {
+          this.nav.setRoot('MenuPage');
+        }
+      });
+    });
+
+    this.initializeApp();
   }
 
   initializeApp() {
