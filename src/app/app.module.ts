@@ -1,5 +1,8 @@
 import { HomePage } from './../pages/home/home';
 import { SDKBrowserModule } from './../shared/sdk/index';
+import { IonicStorageModule } from '@ionic/storage';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -18,7 +21,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   imports: [
     BrowserModule,
     SDKBrowserModule.forRoot(),
+    IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp),
+    BrowserAnimationsModule,
+    IonicModule,
+    FormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
