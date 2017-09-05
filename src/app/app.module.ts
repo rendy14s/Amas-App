@@ -1,3 +1,4 @@
+import { HomePage } from './../pages/home/home';
 import { SDKBrowserModule } from './../shared/sdk/index';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
+    HomePage
   ],
   imports: [
     BrowserModule,
@@ -21,6 +23,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    HomePage
   ],
   providers: [
     StatusBar,
