@@ -1,5 +1,7 @@
 /* tslint:disable */
 import { Injectable } from '@angular/core';
+import { Amasmasterlicence } from '../../models/Amasmasterlicence';
+import { Amasusercredential } from '../../models/Amasusercredential';
 
 export interface Models { [name: string]: any }
 
@@ -7,6 +9,8 @@ export interface Models { [name: string]: any }
 export class SDKModels {
 
   private models: Models = {
+    Amasmasterlicence: Amasmasterlicence,
+    Amasusercredential: Amasusercredential,
     
   };
 
