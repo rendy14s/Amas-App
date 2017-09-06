@@ -23,7 +23,7 @@
         <br><br>Dashboard
       </ion-list-header>
 
-      <button detail-none menuClose ion-item *ngFor="let d of dashboard" (click)="openPage(d)" [hidden]="!d.show" style="background-color: #468294;"
+      <button detail-none menuClose ion-item *ngFor="let d of dashboard" (click)="dashboards(d)" [hidden]="!d.show" style="background-color: #468294;"
         menuClose>
         <ion-icon name="{{d.icons}}" item-left [hidden]="!d.show" style="color:white;"></ion-icon>
         <ion-label [hidden]="!d.show" style="color:white;">{{ d.title }}</ion-label>

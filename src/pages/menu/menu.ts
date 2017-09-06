@@ -21,7 +21,7 @@ export class MenuPage {
   public rootPage: any = HomePage;
   public pages: Array<{ title: string, component: any, icons: any, show: boolean }>;
   public dashboard: Array<{ title: string, component: any, icons: any, show: boolean }>;
-  
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -54,6 +54,35 @@ export class MenuPage {
 
   public openPage(page) {
     this.nav.setRoot(page.component);
+  }
+
+  public dashboards(d) {
+    this.nav.setRoot(d.component);
+  }
+
+  public gotoLogout() {
+    let alert = this.alertCtrl.create({
+      title: 'Confirm',
+      message: 'Do you want logout?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Yes',
+          handler: () => {
+            this.storage.clear();
+            window.localStorage.clear();
+            this.navCtrl.setRoot('LoginPage');
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
 }
