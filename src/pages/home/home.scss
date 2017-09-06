@@ -1,3 +1,27 @@
 page-home {
+    .main-background {
+        background-image:url(../assets/images/bg-home.jpg);
+        position: absolute;
+        overflow: hidden;
+        background-size: cover;                     
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+    }
 
+    .box-flex {
+        background-color: #FFFFFF;
+        opacity: 0.5;
+        height: 27vh;
+        margin-left: 2.5%;
+        margin-top: 4%;
+    }
+
+    .image-home {
+        // position: absolute;
+        // background-size: cover;                     
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
