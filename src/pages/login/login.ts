@@ -1,8 +1,10 @@
+import { Storage } from '@ionic/storage';
 import { AmasusercredentialApi } from './../../shared/sdk/services/custom/Amasusercredential';
 import { Component, trigger, state, style, transition, animate, keyframes } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { md5 } from './../../assets/private/HashSalt';
 import * as moment from 'moment';
+
 /**
  * Generated class for the LoginPage page.
  *
@@ -77,7 +79,8 @@ export class LoginPage {
     public navParams: NavParams,
     public AmasUserCredential: AmasusercredentialApi,
     public loadingCtrl: LoadingController,
-    public alertCtrl: AlertController
+    public alertCtrl: AlertController,
+    public storage: Storage
   ) {
   }
 
@@ -106,6 +109,8 @@ export class LoginPage {
       }
     }).subscribe((loginFind) => {
       this.dataLogin = loginFind;
+      
+      this.storage.set('amasAuth', this.dataLogin);
 
       loader.dismiss();
       this.updateLoginDate();
