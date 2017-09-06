@@ -6,13 +6,50 @@
 -->
 <ion-header>
 
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
+    <ion-title>AMAS</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
+<ion-content>
+  <ion-row class="main-background">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-5 class="box-flex" (click)="performanceProfiling()">
+            <img src="assets/images/logo-pp.png" class="image-home">
+        </ion-col>
+        <ion-col col-1>
+          
+        </ion-col>
+        <ion-col col-5 class="box-flex" (click)="wellness()">
+            <img src="assets/images/logo-wellness.png" class="image-home">
+        </ion-col>
 
+        <ion-col col-5 class="box-flex" (click)="trainingLoad()">
+            <img src="assets/images/logo-training.png" class="image-home">
+         </ion-col>
+         <ion-col col-1>
+           
+         </ion-col>
+         <ion-col col-5 class="box-flex" (click)="pmc()">
+            <img src="assets/images/logo-pmc.png" class="image-home">
+         </ion-col>
+
+         <ion-col col-5 class="box-flex" (click)="mealPlan()">
+            <img src="assets/images/logo-meal.png" class="image-home">
+         </ion-col>
+         <ion-col col-1>
+           
+         </ion-col>
+         <ion-col col-5 class="box-flex" (click)="medical()">
+            <img src="assets/images/logo-medical.png" class="image-home">
+         </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-row>
 </ion-content>
