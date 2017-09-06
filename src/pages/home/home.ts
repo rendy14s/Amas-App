@@ -20,4 +20,28 @@ export class HomePage {
     
   }
 
+  public performanceProfiling(){
+    this.navCtrl.push('PerformanceProfilingPage');
+  }
+
+  public wellness(){
+    this.navCtrl.push('WellnessPage');
+  }
+
+  public trainingLoad(){
+    this.navCtrl.push('TrainingLoadPage');
+  }
+
+  public pmc(){
+    this.navCtrl.push('PmcPage');
+  }
+
+  public mealPlan(){
+    this.navCtrl.push('MealPlanPage');
+  }
+
+  public medical(){
+    this.navCtrl.push('RecoveryManagementPage');
+  }
+
 }
