@@ -6,16 +6,27 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar style="height: 50px" color="primary">
     <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Performance Profiling</ion-title>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-row class="title-chat">
+      <ion-col width-100>
+        <div class="profile-div" [ngStyle]="{'background-image': 'url(assets/images/header_amas.png)'}">
+        </div>
+      </ion-col>
+    </ion-row>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="card-background-page">
+  <ion-card>
+    <img src="assets/images/bg_profile.jpg" />
+      <div class="foto-div" [ngStyle]="{'background-image': 'url(' + photo + ')'}" menuClose></div>
 
+      <p class="card-title">{{username}}</p>
+      <p class="card-subtitle">Performance Profiling</p>
+  </ion-card>
 </ion-content>

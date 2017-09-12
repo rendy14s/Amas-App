@@ -21,7 +21,7 @@ export class HomePage {
   }
 
   public performanceProfiling(){
-    this.navCtrl.push('PerformanceProfilingPage');
+    this.navCtrl.setRoot('PerformanceProfilingPage');
   }
 
   public wellness(){
