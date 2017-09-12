@@ -4,10 +4,12 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+
+
+
 <ion-content>
   <ion-row class="main-background">
-      <!-- style="bottom:10% !important;" -->
-    <ion-col col-md-6 push-md-3 style=" bottom: -10%;"> 
+    <ion-col col-md-6 push-md-3 style="bottom:10% !important;">
       <div padding [@flyInBottomFast]="cloudState" id="cloud-layer">
 
           <ion-row>
@@ -25,7 +27,7 @@
                   <ion-item>
                     <ion-label>
                       <ion-icon name="md-people" icon-left></ion-icon></ion-label>
-                    <ion-input  type="text" name="username" [(ngModel)]="username" placeholder="Username" required></ion-input>
+                    <ion-input type="text" name="email" [(ngModel)]="email" placeholder="Username" required></ion-input>
                   </ion-item>
 
                   <ion-item>
@@ -40,12 +42,12 @@
 
             <ion-row>
               <ion-col class="signup-col">
-                <button ion-button class="login-button" full [@fadeIn]="loginState" [disabled]="!registerForm.form.valid" round>Login</button>
+                <button ion-button class="login-button" [@fadeIn]="loginState" full type="submit" [disabled]="!registerForm.form.valid">Login</button>
               </ion-col>
             </ion-row>
 
           </form>
-          <button ion-button class="login-button" full [@fadeIn]="loginState" (click)="createAccount()" round>Create New Account</button>
+          <button ion-button class="login-button" [@fadeIn]="loginState" full (click)="createAccount()">Create New Account</button>
         </div>
 
       </div>
