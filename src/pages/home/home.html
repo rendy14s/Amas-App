@@ -5,14 +5,17 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar color="primary">
+  <ion-navbar style="height: 50px" color="primary">
     <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+        <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>AMAS</ion-title>
+    <ion-row class="title-chat">
+      <ion-col width-100>
+        <div class="profile-div" [ngStyle]="{'background-image': 'url(assets/images/header_amas.png)'}">
+        </div>
+      </ion-col>
+    </ion-row>
   </ion-navbar>
-
 </ion-header>
 
 
@@ -21,34 +24,34 @@
     <ion-grid>
       <ion-row>
         <ion-col col-5 class="box-flex" (click)="performanceProfiling()">
-            <img src="assets/images/logo-pp.png" class="image-home">
+          <img src="assets/images/logo-pp.png" class="image-home">
         </ion-col>
         <ion-col col-1>
-          
+
         </ion-col>
         <ion-col col-5 class="box-flex" (click)="wellness()">
-            <img src="assets/images/logo-wellness.png" class="image-home">
+          <img src="assets/images/logo-wellness.png" class="image-home">
         </ion-col>
 
         <ion-col col-5 class="box-flex" (click)="trainingLoad()">
-            <img src="assets/images/logo-training.png" class="image-home">
-         </ion-col>
-         <ion-col col-1>
-           
-         </ion-col>
-         <ion-col col-5 class="box-flex" (click)="pmc()">
-            <img src="assets/images/logo-pmc.png" class="image-home">
-         </ion-col>
+          <img src="assets/images/logo-training.png" class="image-home">
+        </ion-col>
+        <ion-col col-1>
 
-         <ion-col col-5 class="box-flex" (click)="mealPlan()">
-            <img src="assets/images/logo-meal.png" class="image-home">
-         </ion-col>
-         <ion-col col-1>
-           
-         </ion-col>
-         <ion-col col-5 class="box-flex" (click)="medical()">
-            <img src="assets/images/logo-medical.png" class="image-home">
-         </ion-col>
+        </ion-col>
+        <ion-col col-5 class="box-flex" (click)="pmc()">
+          <img src="assets/images/logo-pmc.png" class="image-home">
+        </ion-col>
+
+        <ion-col col-5 class="box-flex" (click)="mealPlan()">
+          <img src="assets/images/logo-meal.png" class="image-home">
+        </ion-col>
+        <ion-col col-1>
+
+        </ion-col>
+        <ion-col col-5 class="box-flex" (click)="medical()">
+          <img src="assets/images/logo-medical.png" class="image-home">
+        </ion-col>
       </ion-row>
     </ion-grid>
   </ion-row>
