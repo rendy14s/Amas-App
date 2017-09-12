@@ -1,3 +1,4 @@
+import { Storage } from '@ionic/storage';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -14,11 +15,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PerformanceProfilingPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public photo: any = 'assets/images/no-pp.png';
+  public datasStorage: any;
+  public username: any;
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public storage: Storage
+  ) {
+    
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PerformanceProfilingPage');
+    this.storage.ready().then(() => {
+      this.storage.get('amasAuth').then((amasAuth) => {
+        this.datasStorage = amasAuth;
+        this.username = this.datasStorage.fullname;
+      });
+    });
   }
 
 }

@@ -1,3 +1,50 @@
 page-performance-profiling {
+    .profile-div {
+        width: 140px;
+        height: 50px;
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-position: center;
+        background-position-y: 0;
+        margin-left: 40px;
+    }
 
+    .foto-div{
+        width: 8em;
+        height: 8em;
+        border-radius: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-left: 32%;
+        top: 10%;
+        border: 3px solid #FFF; 
+        position: absolute;
+    }
+
+    .card-background-page {
+        
+          ion-card {
+            position: relative;
+            text-align: center;
+          }
+        
+          .card-title {
+            position: absolute;
+            top: 60%;
+            font-size: 2.0em;
+            width: 100%;
+            font-weight: bold;
+            color: #000000;
+          }
+        
+          .card-subtitle {
+            font-size: 1.0em;
+            position: absolute;
+            top: 75%;
+            width: 100%;
+            color: #000000;
+          }
+        
+        }
 }
